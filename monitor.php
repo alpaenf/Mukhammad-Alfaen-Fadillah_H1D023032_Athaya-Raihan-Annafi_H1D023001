@@ -20,6 +20,10 @@ session_start();
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            background-image: url(bgpemantauan.jpeg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
         }
 
         header {
@@ -65,7 +69,7 @@ session_start();
             padding: 40px 20px;
             max-width: 900px;
             margin: 40px auto;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.7);
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
@@ -159,7 +163,7 @@ session_start();
             margin: 20px auto;
             border-collapse: collapse;
             border: 1px solid #ddd;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.5);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -181,7 +185,6 @@ session_start();
         }
 
         table tr:hover {
-            background-color: #f9f9f9;
             cursor: pointer;
         }
 
@@ -276,7 +279,7 @@ if (!empty($_SESSION['activities'])) {
     echo "<div class='activity-recap' style='margin-top: 30px;'>";
     echo "<h3>Rekap Aktivitas Anda</h3>";
     echo "<table>";
-    echo "<thead><tr><th>No</th><th>Tanggal</th><th>Jenis Aktivitas</th></tr></thead>";
+    echo "<thead><tr><th>No</th><th>Tanggal</th><th>Jenis Aktivitas</th><th>Aksi</th></tr></thead>";
     echo "<tbody>";
     
     foreach ($_SESSION['activities'] as $index => $activity) {
@@ -286,11 +289,28 @@ if (!empty($_SESSION['activities'])) {
         echo "<td>$no</td>";
         echo "<td>$tanggal</td>";
         echo "<td>{$activity['activity']}</td>";
+        // Tambahkan tombol hapus
+        echo "<td>
+                <form action='' method='POST' style='display:inline;'>
+                    <input type='hidden' name='delete_index' value='$index'>
+                    <button type='submit' name='delete_activity' style='background-color:#e74c3c; color:white; padding:5px 10px; border:none; border-radius:5px; cursor:pointer;'>Hapus</button>
+                </form>
+              </td>";
         echo "</tr>";
     }
     
     echo "</tbody></table>";
     echo "</div>";
+}
+
+if (isset($_POST['delete_activity'])) {
+    $deleteIndex = $_POST['delete_index'];
+    if (isset($_SESSION['activities'][$deleteIndex])) {
+        // Hapus aktivitas berdasarkan indeks
+        unset($_SESSION['activities'][$deleteIndex]);
+        // Reset indeks array untuk menghindari kesenjangan
+        $_SESSION['activities'] = array_values($_SESSION['activities']);
+    }
 }
 ?>
 
@@ -346,7 +366,8 @@ if (!empty($_SESSION['activities'])) {
 if (isset($_POST['submit'])) {
     $score = 0;
     foreach ($activities as $index => $activity) {
-        $answer = $POST["activity$index"] ?? 'no';
+        
+        $answer = $_POST["activity_$index"] ?? 'no';
         if ($answer === "yes") {
             $score++;
         }

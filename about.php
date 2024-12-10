@@ -13,7 +13,13 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            background-image: url(bgprofil.jpeg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            
         }
+
 
         header {
             background-color: #008080;
@@ -56,7 +62,7 @@
 
         /* Hero Section */
         .hero {
-            background-color: #e0f7fa;
+            background-color: rgba(0, 0, 0, 0.4);
             padding: 50px 20px;
             text-align: center;
             border-bottom: 2px solid #008080;
@@ -64,12 +70,13 @@
 
         .hero h2 {
             font-size: 2em;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
+            color: aqua;
         }
 
         .hero p {
             font-size: 1.2em;
-            color: #555;
+            color: white;
         }
 
         /* Profiles Section */
@@ -83,7 +90,7 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 15px;
-            max-width: 300px;
+            width: 200px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
             cursor: pointer;
@@ -117,7 +124,7 @@
         /* About Section */
         .about-details {
             padding: 30px 20px;
-            background-color: #fff;
+            background-color: rgba(0, 0, 0, 0.4);
             margin: 20px auto;
             border-radius: 8px;
             max-width: 800px;
@@ -126,13 +133,13 @@
 
         .about-details h3 {
             text-align: center;
-            color: #008080;
+            color: aqua;
             margin-bottom: 20px;
         }
 
         .about-details p {
             font-size: 1.1em;
-            color: #555;
+            color: white;
         }
 
         /* Footer */
@@ -170,13 +177,13 @@
         <section class="profiles">
             <div class="profile">
                 <img src="https://mfiles.alphacoders.com/101/thumb-350-1012645.png" alt="Fadil">
-                <h4>Fadil</h4>
-                <p>NIM: 1234567890</p>
+                <h4>Mukhammad Alfaen Fadillah</h4>
+                <p>NIM: H1D023032</p>
             </div>
             <div class="profile">
                 <img src="https://mfiles.alphacoders.com/101/thumb-350-1012645.png" alt="Rekan">
-                <h4>Rekan</h4>
-                <p>NIM: 0987654321</p>
+                <h4>Athaya Raihan Annafi</h4>
+                <p>NIM: H1D023001</p>
             </div>
         </section>
 

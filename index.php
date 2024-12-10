@@ -12,11 +12,22 @@ session_start();
    <style>
        /* Global Styles */
        body {
-           font-family: 'Arial', sans-serif;
+           font-family: 'Neu';
            margin: 0;
            padding: 0;
            background-color: #f4f4f4;
            color: #333;
+           background-image: url(bg1.jpeg);
+           background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            width: 100%;
+            height: auto;
+       }
+
+       @font-face{
+            font-family: 'Neu';
+            src: url(asset/Neue-Aachen-Pro-Book.ttf);
        }
 
        header {
@@ -84,16 +95,26 @@ session_start();
        .merch-section, .facts-section, .journey-section {
            padding: 50px 20px;
            text-align: center;
-           background-color: #e0f7fa;
-           margin: 20px 0;
+           background-color: rgba(0, 0, 0, 0.4);
+           margin: 80px 0;
            border-radius: 10px;
        }
 
        .merch-section h2, 
        .facts-section h2, 
        .journey-section h2 {
-           font-size: 2em;
-           margin-bottom: 20px;
+           font-size: 3.5em;
+           margin-bottom: 70px;
+           color: aqua;
+       }
+
+       .items{
+        
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px; 
+
        }
 
        .facts-section ul {
@@ -104,10 +125,10 @@ session_start();
 
        .facts-section ul li {
            margin: 10px 0;
-           font-size: 1.2em;
+           font-size: 1.5em;
            cursor: pointer;
-           color: #008080;
-           text-decoration: underline;
+           color: white;
+           text-decoration: none;
            transition: color 0.3s;
        }
 
@@ -116,8 +137,9 @@ session_start();
        }
 
        .journey-section p {
-           font-size: 1.2em;
-           line-height: 1.6;
+           font-size: 1.5em;
+           line-height: 1;
+           color: white;
        }
 
        footer {
@@ -154,19 +176,29 @@ session_start();
            <p>Berkomitmen untuk masa depan yang lebih baik melalui gaya hidup yang bertanggung jawab.</p>
        </section>
 
-       <section class="merch-section">
-           <h2>Merchandise Pilihan</h2>
-           <div class="items">
-               <img src="merch1.jpg" alt="Merchandise 1">
-               <img src="merch2.jpg" alt="Merchandise 2">
-               <img src="merch3.jpg" alt="Merchandise 3">
-           </div>
+       <section class="journey-section">
+           <h2>Mulailah Hari Ini !</h2>
+           <p>Mulailah perjalanan ramah lingkungan Anda hari ini! <br> Dapatkan tips, ide, dan alat bantu untuk membuat perubahan kecil yang menghasilkan dampak besar bagi planet kita.</p>
+           <p>Bersama, kita dapat menciptakan dunia yang lebih hijau dan lebih sehat. Mulailah sekarang, karena bumi tak bisa menunggu lebih lama.</p>
+           <p>Jelajahi cerita inspiratif dari komunitas kami yang telah mengambil langkah menuju gaya hidup hijau.<br> Bersama kita dapat menciptakan masa depan yang lebih baik!</p>
+           <p>Kalau Bukan Kita Siapa Lagi?</p>
        </section>
 
-       <section class="journey-section">
-           <h2>Great Journey Awaits</h2>
-           <p>Mulailah perjalanan ramah lingkungan Anda hari ini! Dapatkan tips, ide, dan alat bantu untuk membuat perubahan kecil yang menghasilkan dampak besar bagi planet kita.</p>
-           <p>Jelajahi cerita inspiratif dari komunitas kami yang telah mengambil langkah menuju gaya hidup hijau. Bersama kita dapat menciptakan masa depan yang lebih baik!</p>
+       <section class="merch-section">
+           <h2>Kegiatan Ramah Lingkungan</h2>
+           <div class="items">
+               <img src="kegiatan1.jpeg" alt="Merchandise 1">
+               <img src="kegiatan2.jpeg" alt="Merchandise 2">
+               <img src="kegiatan3.jpeg" alt="Merchandise 3">
+               <img src="kegiatan4.jpeg" alt="Merchandise 3">
+               <img src="kegiatan5.jpeg" alt="Merchandise 3">
+               <img src="kegiatan6.jpeg" alt="Merchandise 3">
+               <img src="kegiatan7.jpeg" alt="Merchandise 3">
+               <img src="kegiatan8.jpeg" alt="Merchandise 3">
+               <img src="kegiatan9.jpeg" alt="Merchandise 3">
+               <img src="kegiatan10.jpeg" alt="Merchandise 3">
+               
+           </div>
        </section>
 
        <section class="facts-section">
@@ -175,6 +207,9 @@ session_start();
                <li onclick="window.location.href='monitor.php'">Menghemat energi rumah tangga dapat mengurangi emisi hingga 20%.</li>
                <li onclick="window.location.href='monitor.php'">Limbah plastik butuh waktu lebih dari 400 tahun untuk terurai.</li>
                <li onclick="window.location.href='monitor.php'">Menggunakan transportasi umum membantu menurunkan polusi udara.</li>
+               <li onclick="window.location.href='monitor.php'">Setiap pohon yang ditanam dapat menyerap hingga 22 kg karbon dioksida setiap tahun</li>
+               <li onclick="window.location.href='monitor.php'">Produksi pakaian menyumbang 10% dari emisi karbon global. Membeli pakaian bekas atau mendaur ulang dapat membantu mengurangi dampaknya.</li>
+               <li onclick="window.location.href='monitor.php'">Menggunakan kembali 1 ton kertas bekas dapat menghemat 17 pohon dan 26.500 liter air.</li>
            </ul>
        </section>
    </main>

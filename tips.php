@@ -12,6 +12,10 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            background-image: url(bgtips.jpeg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
         }
 
         header {
@@ -61,24 +65,25 @@
         .hero {
             text-align: center;
             padding: 20px;
-            background-color: #e0f7fa;
+            background-color: rgba(0, 0, 0, 0.4);
             border-bottom: 2px solid #008080;
-            margin-bottom: 20px;
+            margin-bottom: 100px;
         }
 
         .hero h2 {
             font-size: 2em;
             margin-bottom: 10px;
+            color: aqua;
         }
 
         .hero p {
             font-size: 1.2em;
-            color: #555;
+            color: white;
         }
 
         
         .tips {
-            background-color: #e0f7fa;
+            background-color: rgba(0, 0, 0, 0.4);
             border: 1px solid #008080;
             border-radius: 5px;
             margin: 20px auto;
@@ -89,9 +94,10 @@
 
         .tips h3 {
             margin-top: 0;
-            color: #008080;
-            font-size: 1.5em;
+            color: aqua;
+            font-size: 2em;
         }
+        
 
         .tips ul {
             padding-left: 20px;
@@ -100,6 +106,7 @@
         .tips li {
             margin-bottom: 10px;
             font-size: 1.1em;
+            color: white;
         }
     </style>
 </head>
@@ -132,6 +139,11 @@
                 <li>Coba tanam pohon kecil di rumah untuk membantu penghijauan.</li>
                 <li>Gunakan transportasi umum atau sepeda untuk mengurangi emisi karbon.</li>
                 <li>Daur ulang sampah plastik dan kertas untuk mengurangi limbah.</li>
+                <li>Hemat Penggunaan Air</li>
+                <li>Kurangi penggunaan wadah sekali pakai dengan membawa kotak makan dan botol minum sendiri.</li>
+                <li>Olah sampah organik menjadi kompos untuk mengurangi limbah yang berakhir di TPA.</li>
+                <li>Gunakan cahaya alami sebanyak mungkin untuk mengurangi konsumsi listrik.</li>
+                <li>Ikut serta dalam program penghijauan dengan menanam pohon di area sekitar.</li>
             </ul>
         </section>
     </main>

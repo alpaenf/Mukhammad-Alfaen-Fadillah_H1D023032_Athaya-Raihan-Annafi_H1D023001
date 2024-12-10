@@ -12,6 +12,10 @@
             padding: 0;
             background: linear-gradient(135deg, #e0f7fa, #f4f4f4);
             color: #333;
+            background-image: url(bgkontak.jpeg);
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
         }
 
         header {
